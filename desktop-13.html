@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+15/06/2025 11:42:01 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "Coolvetica-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/65c3438c48b1aabd7b3e3fe5/fonts/coolvetica-rg.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/656791b77f52524f6a44afda/fonts/helvetica-regular.otf') format("opentype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6847ffe56c9d7f11d6373bf7.6847ffe66c9d7f11d6373bfa.T1MMDwN.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --bittersweet: #fe7c5f;
+  --black: #000000;
+  --masala: #3b3b3b;
+  --pomegranate: #fe4619;
+  --seashell: #f1f1f1;
+  --seashell-peach: #fef7ee;
+  --shark: #262626;
+  --sonic-silver: #767676;
+  --star-dust: #9d9d9d;
+  --vivid-tangerine: #fea28d;
+  --white: #ffffff;
+ 
+  --font-size-l: 35.3px;
+  --font-size-m: 27.8px;
+  --font-size-s: 25.3px;
+  --font-size-xl: 47.4px;
+  --font-size-xs: 20.2px;
+  --font-size-xxl: 58.9px;
+  --font-size-xxs: 19px;
+ 
+  --font-family-coolvetica-regular: "Coolvetica-Regular", Helvetica;
+  --font-family-helvetica-regular: "Helvetica-Regular", Helvetica;
+}
+.helvetica-regular-normal-white-20-2px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-25-3px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-27-8px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-58-9px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-black-27-8px {
+  color: var(--black);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-35-3px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-pomegranate-26-2px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: 26.2px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-shark-58-9px {
+  color: var(--shark);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-19px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-pomegranate-25-3px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-47-4px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-shark-47-4px {
+  color: var(--shark);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-58-9px-2 {
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-pomegranate-58-9px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-black-20-2px {
+  color: var(--black);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.about {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.home {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.id-love-to-hear-abou {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.project {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.service {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.vector-5 {
+  background-color: transparent;
+  position: absolute;
+}
+/* screen - desktop-13 */
+
+.desktop-13 {
+  background-color: var(--white);
+  height: 3406px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.desktop-13 .title-ABhMUW {
+  background-color: transparent;
+  height: auto;
+  left: 534px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 276px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .rectangle-24-ABhMUW {
+  height: 1263px;
+  top: 649px;
+}
+
+.desktop-13 .motion-graphic-ABhMUW {
+  background-color: transparent;
+  height: auto;
+  left: 534px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 718px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .rectangle-58-ABhMUW {
+  background-color: transparent;
+  height: 728px;
+  left: 84px;
+  overflow: hidden;
+  position: absolute;
+  top: 878px;
+  width: 410px;
+}
+
+.desktop-13 .rectangle-59-ABhMUW {
+  background-color: transparent;
+  height: 728px;
+  left: 515px;
+  overflow: hidden;
+  position: absolute;
+  top: 878px;
+  width: 410px;
+}
+
+.desktop-13 .rectangle-60-ABhMUW {
+  background-color: transparent;
+  height: 728px;
+  left: 946px;
+  overflow: hidden;
+  position: absolute;
+  top: 878px;
+  width: 410px;
+}
+
+.desktop-13 .motion-graphics-are-ABhMUW {
+  background-color: transparent;
+  height: auto;
+  left: 334px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 375px;
+  width: 773px;
+}
+
+.desktop-13 .group-12-ABhMUW {
+  background-color: transparent;
+  height: 90px;
+  left: 89px;
+  position: absolute;
+  top: 51px;
+  width: 1272px;
+}
+
+.desktop-13 .rectangle-1-vSGEDx {
+  background-color: var(--shark);
+  border-radius: 55px;
+  height: 90px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1262px;
+}
+
+.desktop-13 .home-vSGEDx {
+  left: 92px;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .about-vSGEDx {
+  left: 218px;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .project-vSGEDx {
+  left: 936px;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .service-vSGEDx {
+  left: 343px;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .contact-us-vSGEDx {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1070px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .group-8-ABhMUW {
+  background-color: transparent;
+  height: 1563px;
+  left: -0px;
+  position: absolute;
+  top: 2032px;
+  width: 1465px;
+}
+
+.desktop-13 .id-love-to-hear-abou-hRGHXy {
+  left: 461px;
+  text-align: center;
+  top: 381px;
+  width: 519px;
+}
+
+.desktop-13 .rectangle-31-hRGHXy {
+  background-color: var(--pomegranate);
+  border-radius: 71.5px;
+  height: 143px;
+  left: 2px;
+  position: absolute;
+  top: 0px;
+  width: 1443px;
+}
+
+.desktop-13 .rectangle-24-hRGHXy {
+  height: 969px;
+  top: 594px;
+}
+
+.desktop-13 .wildan-dzaky-hRGHXy {
+  background-color: transparent;
+  height: auto;
+  left: 68px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 707px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-13 .navigation-hRGHXy {
+  background-color: transparent;
+  height: auto;
+  left: 630px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 733px;
+  width: 143px;
+}
+
+.desktop-13 .contact-hRGHXy {
+  background-color: transparent;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 733px;
+  width: 95px;
+}
+
+.desktop-13 .home-hRGHXy {
+  left: 638px;
+  text-align: center;
+  top: 794px;
+  width: 61px;
+}
+
+.desktop-13 .about-hRGHXy {
+  left: 638px;
+  top: 849px;
+  width: 81px;
+}
+
+.desktop-13 .service-hRGHXy {
+  left: 638px;
+  text-align: center;
+  top: 903px;
+  width: 68px;
+}
+
+.desktop-13 .project-hRGHXy {
+  left: 638px;
+  text-align: center;
+  top: 958px;
+  width: 65px;
+}
+
+.desktop-13 .vector-5-hRGHXy {
+  height: 2px;
+  left: 89px;
+  top: 1115px;
+  width: 1262px;
+}
+
+.desktop-13 .id-love-to-hear-abou-RWn9As {
+  left: 68px;
+  text-align: left;
+  top: 818px;
+  width: 309px;
+}
+
+.desktop-13 .copyrights-2025-all-rights-reserved-hRGHXy {
+  background-color: transparent;
+  height: auto;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1161px;
+  width: 464px;
+}
+
+.desktop-13 .component-1-ABhMUW {
+  background-color: transparent;
+  height: 62px;
+  left: 563px;
+  position: absolute;
+  top: 2326px;
+  width: 314px;
+}
+
+.desktop-13 .frame-5-IIzxtx {
+  align-items: center;
+  background-color: var(--pomegranate);
+  border-radius: 173px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: 62px;
+  justify-content: center;
+  left: 0px;
+  padding: 10px 30px;
+  position: absolute;
+  top: 0px;
+  width: 314px;
+}
+
+.desktop-13 .lets-connect-LL3ZcO {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 254px;
+}
+
+.desktop-13 .vector-5-IIzxtx {
+  height: 22px;
+  left: 258px;
+  top: 20px;
+  width: 22px;
+}
+
+.desktop-13 .group-7-ABhMUW {
+  background-color: transparent;
+  height: 184px;
+  left: 0px;
+  position: absolute;
+  top: 2010px;
+  width: 1440px;
+}
+
+.desktop-13 .behance-ABhMUW {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 2825px;
+  width: 232px;
+}
+
+.desktop-13 .wildsharkyt23gmailcom-ABhMUW {
+  background-color: transparent;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 2879px;
+  width: 238px;
+}
+
+.desktop-13 .linkedin-ABhMUW {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 2929px;
+  width: 203px;
+}
+
+.desktop-13 .instagram-ABhMUW {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 2982px;
+  width: 203px;
+}
+
+.desktop-13 .rectangle-24 {
+  background-color: var(--shark);
+  border-radius: 60px;
+  left: 0px;
+  position: absolute;
+  width: 1440px;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="desktop-13"><div class="container-center-horizontal"><div class="desktop-13 screen " data-id="16:650"><h1 class="title-ABhMUW coolvetica-regular-normal-shark-58-9px" data-id="16:658">Motion Graphic</h1><div class="rectangle-24-ABhMUW rectangle-24" data-id="58:7"></div><div class="motion-graphic-ABhMUW coolvetica-regular-normal-white-58-9px" data-id="58:8">Motion Graphic</div><div class="rectangle-58-ABhMUW" data-id="60:559"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/CbEgAge4rT4?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><div class="rectangle-59-ABhMUW" data-id="60:560"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/PYRKduRUKEY?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><div class="rectangle-60-ABhMUW" data-id="60:561"><iframe style="border: 0; pointer-events: auto;" id="ytplayer" type="text/html" width="100%" height="100%" src="" anima-src="https://www.youtube.com/embed/O6x73HAWoss?rel=0" frameborder="0" allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen" msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen" webkitallowfullscreen="webkitallowfullscreen"></iframe></div><p class="motion-graphics-are-ABhMUW helvetica-regular-normal-black-27-8px" data-id="62:563">Motion graphics are a combination of graphic design and animation that creates the illusion of movement or visual animation through text, shapes, and other graphic elements.</p><div class="group-12-ABhMUW" data-id="98:457"><div class="rectangle-1-vSGEDx" data-id="98:458"></div><a href="index.html"><div class="home-vSGEDx home helvetica-regular-normal-white-25-3px" data-id="98:459">Home</div></a><a href="desktop-3.html"><div class="about-vSGEDx about helvetica-regular-normal-white-25-3px" data-id="98:460">About</div></a><a href="desktop-5.html"><div class="project-vSGEDx project helvetica-regular-normal-pomegranate-25-3px" data-id="98:461">Project</div></a><a href="desktop-4.html"><div class="service-vSGEDx service helvetica-regular-normal-white-25-3px" data-id="98:462">Service</div></a><a href="desktop-6.html"><div class="contact-us-vSGEDx helvetica-regular-normal-white-25-3px" data-id="98:463">Contact Us</div></a></div><div class="group-8-ABhMUW" data-id="98:643"><p class="id-love-to-hear-abou-hRGHXy id-love-to-hear-abou helvetica-regular-normal-black-27-8px" data-id="98:644">I’d love to hear about your next project or collaboration idea</p><div class="rectangle-31-hRGHXy" data-id="98:645"></div><div class="rectangle-24-hRGHXy rectangle-24" data-id="98:646"></div><div class="wildan-dzaky-hRGHXy coolvetica-regular-normal-white-58-9px" data-id="98:647">Wildan Dzaky</div><div class="navigation-hRGHXy coolvetica-regular-normal-pomegranate-26-2px" data-id="98:648">Navigation</div><div class="contact-hRGHXy coolvetica-regular-normal-pomegranate-26-2px" data-id="98:649">Contact</div><a href="index.html"><div class="home-hRGHXy home helvetica-regular-normal-white-20-2px" data-id="98:650">Home</div></a><a href="desktop-3.html"><div class="about-hRGHXy about helvetica-regular-normal-white-20-2px" data-id="98:651">About</div></a><a href="desktop-4.html"><div class="service-hRGHXy service helvetica-regular-normal-white-20-2px" data-id="98:652">Service</div></a><a href="desktop-5.html"><div class="project-hRGHXy project helvetica-regular-normal-white-20-2px" data-id="98:653">Project</div></a><img class="vector-5-hRGHXy vector-5" data-id="98:654" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/684ead06b48425d808f258f5/releases/684eb18533c20d0570b23764/img/vector-5-2.svg" alt="Vector 5"><p class="id-love-to-hear-abou-RWn9As id-love-to-hear-abou helvetica-regular-normal-white-27-8px" data-id="98:655">I’d love to hear about your next project or collaboration idea</p><p class="copyrights-2025-all-rights-reserved-hRGHXy helvetica-regular-normal-white-27-8px" data-id="98:656">Copyrights 2025. All Rights Reserved</p></div><div class="component-1-ABhMUW" data-id="98:657"><a href="desktop-6.html"><div class="frame-5-IIzxtx" data-id="I98:657;93:110"><div class="lets-connect-LL3ZcO coolvetica-regular-normal-white-35-3px" data-id="I98:657;93:111">Let’s Connect</div></div></a><img class="vector-5-IIzxtx vector-5" data-id="I98:657;93:112" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/684ead06b48425d808f258f5/releases/684eb18533c20d0570b23764/img/vector-5-5.svg" alt="Vector 5"></div><img class="group-7-ABhMUW" data-id="98:658" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/684ead06b48425d808f258f5/releases/684eb18533c20d0570b23764/img/group-7-2.png" alt="Group 7"><a href="https://www.behance.net/wildandzaky" target="_blank"><div class="behance-ABhMUW helvetica-regular-normal-white-20-2px" data-id="98:668">Behance</div></a><div class="wildsharkyt23gmailcom-ABhMUW helvetica-regular-normal-white-20-2px" data-id="98:669">wildsharkyt23@gmail.com</div><a href="https://www.linkedin.com/in/wildzaky/" target="_blank"><div class="linkedin-ABhMUW helvetica-regular-normal-white-20-2px" data-id="98:670">Linkedin</div></a><a href="https://www.instagram.com/wildzaky/" target="_blank"><div class="instagram-ABhMUW helvetica-regular-normal-white-20-2px" data-id="98:671">Instagram</div></a></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>

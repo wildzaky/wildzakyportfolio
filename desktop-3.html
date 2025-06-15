@@ -1,0 +1,919 @@
+<!desktop-3>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+15/06/2025 09:11:58 -->
+
+<html><head><meta charset="utf-8"><meta name="viewport" content="width=1440, maximum-scale=1.0"><link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png"><meta name="og:type" content="website"><meta name="twitter:card" content="photo"><script id="anima-load-script" src="load.js"></script><script id="anima-hotspots-script" src="hotspots.js"></script><script id="anima-overrides-script" src="overrides.js"></script><script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script><style>
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+@font-face {
+  font-family: "Coolvetica-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/65c3438c48b1aabd7b3e3fe5/fonts/coolvetica-rg.otf') format("opentype");
+}
+
+@font-face {
+  font-family: "Helvetica-Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://anima-uploads.s3.amazonaws.com/projects/656791b77f52524f6a44afda/fonts/helvetica-regular.otf') format("opentype");
+}
+/* The following line is used to measure usage of this code. You can remove it if you want. */
+@import url("https://px.animaapp.com/6847ffe56c9d7f11d6373bf7.6847ffe66c9d7f11d6373bfa.c6EOg49.hch.png");
+
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from { opacity: 0 }
+ to { opacity: 1 }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root { 
+  --bittersweet: #fe7c5f;
+  --black: #000000;
+  --masala: #3b3b3b;
+  --pomegranate: #fe4619;
+  --seashell: #f1f1f1;
+  --seashell-peach: #fef7ee;
+  --shark: #262626;
+  --sonic-silver: #767676;
+  --star-dust: #9d9d9d;
+  --vivid-tangerine: #fea28d;
+  --white: #ffffff;
+ 
+  --font-size-l: 35.3px;
+  --font-size-m: 27.8px;
+  --font-size-s: 25.3px;
+  --font-size-xl: 47.4px;
+  --font-size-xs: 20.2px;
+  --font-size-xxl: 58.9px;
+  --font-size-xxs: 19px;
+ 
+  --font-family-coolvetica-regular: "Coolvetica-Regular", Helvetica;
+  --font-family-helvetica-regular: "Helvetica-Regular", Helvetica;
+}
+.helvetica-regular-normal-white-20-2px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-25-3px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-27-8px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-58-9px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-black-27-8px {
+  color: var(--black);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-35-3px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-pomegranate-26-2px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: 26.2px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-shark-58-9px {
+  color: var(--shark);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-white-19px {
+  color: var(--white);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xxs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-pomegranate-25-3px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-47-4px {
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-shark-47-4px {
+  color: var(--shark);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-white-58-9px-2 {
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coolvetica-regular-normal-pomegranate-58-9px {
+  color: var(--pomegranate);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.helvetica-regular-normal-black-20-2px {
+  color: var(--black);
+  font-family: var(--font-family-helvetica-regular);
+  font-size: var(--font-size-xs);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+
+.about {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+}
+
+.home {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.id-love-to-hear-abou {
+  background-color: transparent;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.project {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.service {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+}
+
+.vector-5 {
+  background-color: transparent;
+  position: absolute;
+}
+/* screen - desktop-3 */
+
+.desktop-3 {
+  background-color: var(--white);
+  height: 3603px;
+  overflow: hidden;
+  overflow-x: hidden;
+  position: relative;
+  width: 1440px;
+}
+
+.desktop-3 .rectangle-2-cusbr8 {
+  background-color: var(--shark);
+  border-radius: 60px;
+  height: 644px;
+  left: 0px;
+  position: absolute;
+  top: 843px;
+  width: 1440px;
+}
+
+.desktop-3 .ellipse-5-cusbr8 {
+  background-color: var(--pomegranate);
+  border-radius: 213px;
+  height: 426px;
+  left: 161px;
+  position: absolute;
+  top: 289px;
+  width: 426px;
+}
+
+.desktop-3 .mask-group-cusbr8 {
+  background-color: transparent;
+  height: 426px;
+  left: 161px;
+  position: absolute;
+  top: 289px;
+  width: 426px;
+}
+
+.desktop-3 .adobe-express-file-55-3-cusbr8 {
+  background-color: transparent;
+  height: 343px;
+  left: 98px;
+  position: absolute;
+  top: 204px;
+  width: 552px;
+}
+
+.desktop-3 .title-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 675px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 288px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .im-a-creative-video-cusbr8 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 675px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 405px;
+  width: 585px;
+}
+
+.desktop-3 .i-started-my-creativ-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 227px;
+  letter-spacing: 0.00px;
+  line-height: 43.8px;
+  position: absolute;
+  text-align: center;
+  top: 1056px;
+  width: 1015px;
+}
+
+.desktop-3 .my-career-so-far-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 514px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 942px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .rectangle-31-cusbr8 {
+  left: 88px;
+  top: 1729px;
+  width: 1267px;
+}
+
+.desktop-3 .rectangle-32-cusbr8 {
+  background-color: var(--pomegranate);
+  border-radius: 71.5px;
+  height: 143px;
+  left: 88px;
+  position: absolute;
+  top: 1922px;
+  width: 1267px;
+}
+
+.desktop-3 .certificate-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 588px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 1614px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .gdt-lab-indonesia-cusbr8 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: 46.1px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 162px;
+  letter-spacing: 0.00px;
+  line-height: 41.0px;
+  position: absolute;
+  text-align: left;
+  top: 1759px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .smk-negeri-2-singosari-cusbr8 {
+  background-color: transparent;
+  color: var(--white);
+  font-family: var(--font-family-coolvetica-regular);
+  font-size: 46.1px;
+  font-style: normal;
+  font-weight: 400;
+  height: auto;
+  left: 162px;
+  letter-spacing: 0.00px;
+  line-height: 41.0px;
+  position: absolute;
+  text-align: left;
+  top: 1951px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .medalion-of-excellence-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 162px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1810px;
+  width: 387px;
+}
+
+.desktop-3 .certificate-of-competency-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 162px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 2002px;
+  width: 437px;
+}
+
+.desktop-3 .graphic-design-technology-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 1057px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1768px;
+  width: 243px;
+}
+
+.desktop-3 .junior-content-creator-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 1057px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1960px;
+  width: 255px;
+}
+
+.desktop-3 .group-12-cusbr8 {
+  background-color: transparent;
+  height: 90px;
+  left: 89px;
+  position: absolute;
+  top: 51px;
+  width: 1272px;
+}
+
+.desktop-3 .rectangle-1-fnkLnZ {
+  background-color: var(--shark);
+  border-radius: 55px;
+  height: 90px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1262px;
+}
+
+.desktop-3 .home-fnkLnZ {
+  left: 92px;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .about-fnkLnZ {
+  left: 218px;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .project-fnkLnZ {
+  left: 936px;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .service-fnkLnZ {
+  left: 343px;
+  text-align: left;
+  top: 29px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .contact-us-fnkLnZ {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 1070px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 30px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .group-8-cusbr8 {
+  background-color: transparent;
+  height: 1563px;
+  left: -0px;
+  position: absolute;
+  top: 2289px;
+  width: 1465px;
+}
+
+.desktop-3 .id-love-to-hear-abou-IVz8fj {
+  left: 461px;
+  text-align: center;
+  top: 381px;
+  width: 519px;
+}
+
+.desktop-3 .rectangle-31-IVz8fj {
+  left: 2px;
+  top: 0px;
+  width: 1443px;
+}
+
+.desktop-3 .rectangle-24-IVz8fj {
+  background-color: var(--shark);
+  border-radius: 60px;
+  height: 969px;
+  left: 0px;
+  position: absolute;
+  top: 594px;
+  width: 1440px;
+}
+
+.desktop-3 .wildan-dzaky-IVz8fj {
+  background-color: transparent;
+  height: auto;
+  left: 68px;
+  letter-spacing: 0.00px;
+  line-height: 52.4px;
+  position: absolute;
+  text-align: left;
+  top: 707px;
+  white-space: nowrap;
+  width: auto;
+}
+
+.desktop-3 .navigation-IVz8fj {
+  background-color: transparent;
+  height: auto;
+  left: 630px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 733px;
+  width: 143px;
+}
+
+.desktop-3 .contact-IVz8fj {
+  background-color: transparent;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 733px;
+  width: 95px;
+}
+
+.desktop-3 .home-IVz8fj {
+  left: 638px;
+  text-align: center;
+  top: 794px;
+  width: 61px;
+}
+
+.desktop-3 .about-IVz8fj {
+  left: 638px;
+  top: 849px;
+  width: 81px;
+}
+
+.desktop-3 .service-IVz8fj {
+  left: 638px;
+  text-align: center;
+  top: 903px;
+  width: 68px;
+}
+
+.desktop-3 .project-IVz8fj {
+  left: 638px;
+  text-align: center;
+  top: 958px;
+  width: 65px;
+}
+
+.desktop-3 .vector-5-IVz8fj {
+  height: 2px;
+  left: 89px;
+  top: 1115px;
+  width: 1262px;
+}
+
+.desktop-3 .id-love-to-hear-abou-M6lpeK {
+  left: 68px;
+  text-align: left;
+  top: 818px;
+  width: 309px;
+}
+
+.desktop-3 .copyrights-2025-all-rights-reserved-IVz8fj {
+  background-color: transparent;
+  height: auto;
+  left: 488px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  top: 1161px;
+  width: 464px;
+}
+
+.desktop-3 .component-1-cusbr8 {
+  background-color: transparent;
+  height: 62px;
+  left: 563px;
+  position: absolute;
+  top: 2583px;
+  width: 314px;
+}
+
+.desktop-3 .frame-5-drrb1S {
+  align-items: center;
+  background-color: var(--pomegranate);
+  border-radius: 173px;
+  cursor: pointer;
+  display: flex;
+  gap: 10px;
+  height: 62px;
+  justify-content: center;
+  left: 0px;
+  padding: 10px 30px;
+  position: absolute;
+  top: 0px;
+  width: 314px;
+}
+
+.desktop-3 .lets-connect-fyq9J8 {
+  background-color: transparent;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  margin-top: -1.00px;
+  position: relative;
+  text-align: left;
+  width: 254px;
+}
+
+.desktop-3 .vector-5-drrb1S {
+  height: 22px;
+  left: 258px;
+  top: 20px;
+  width: 22px;
+}
+
+.desktop-3 .group-7-cusbr8 {
+  background-color: transparent;
+  height: 184px;
+  left: 0px;
+  position: absolute;
+  top: 2267px;
+  width: 1440px;
+}
+
+.desktop-3 .behance-cusbr8 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 3082px;
+  width: 232px;
+}
+
+.desktop-3 .wildsharkyt23gmailcom-cusbr8 {
+  background-color: transparent;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 3136px;
+  width: 238px;
+}
+
+.desktop-3 .linkedin-cusbr8 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 3186px;
+  width: 203px;
+}
+
+.desktop-3 .instagram-cusbr8 {
+  background-color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 927px;
+  letter-spacing: 0.00px;
+  line-height: normal;
+  position: absolute;
+  text-align: left;
+  text-decoration: underline;
+  top: 3239px;
+  width: 203px;
+}
+
+.desktop-3 .rectangle-31 {
+  background-color: var(--pomegranate);
+  border-radius: 71.5px;
+  height: 143px;
+  position: absolute;
+}
+</style></head><body style="margin: 0;background: #ffffff;"><input type="hidden" id="anPageName" name="page" value="desktop-3"><div class="container-center-horizontal"><div class="desktop-3 screen " data-id="11:169"><div class="rectangle-2-cusbr8" data-id="13:294"></div><div class="ellipse-5-cusbr8" data-id="11:288"></div><img class="mask-group-cusbr8" data-id="77:667" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6847ffe86c9d7f11d6373bfc/releases/684d521afbf6669bcf241657/img/mask-group-9@2x.png" alt="Mask group"><img class="adobe-express-file-55-3-cusbr8" data-id="77:666" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6847ffe86c9d7f11d6373bfc/releases/684e69a3612daac40667eda1/img/adobe-express---file--55--3.png" alt="Adobe Express - file (55) 3"><h1 class="title-cusbr8 coolvetica-regular-normal-shark-58-9px" data-id="11:289">Hi There!</h1><a href="https://www.instagram.com/formula.interest/" target="_blank"><p class="im-a-creative-video-cusbr8 helvetica-regular-normal-black-27-8px" data-id="11:290">I’m a creative video editor and graphic designer with 5+ years of experience crafting digital content for TikTok, YouTube Shorts, Instagram, and more.</p></a><p class="i-started-my-creativ-cusbr8 helvetica-regular-normal-white-27-8px" data-id="13:292">I started my creative journey in 2020 as a self-taught video editor and graphic designer. Since then, I&#39;ve worked on various projects—from social media content and motion graphics to branding and web visuals. I’ve built a TikTok and YouTube presence from scratch, reaching over 140K+ followers and 40M+ organic views, all through original, high-retention short videos. With experience in Adobe Creative Suite, Figma, and CapCut, I help brands and creators deliver content that stands out and performs.</p><div class="my-career-so-far-cusbr8 coolvetica-regular-normal-white-58-9px" data-id="13:291">My Career So Far</div><div class="rectangle-31-cusbr8 rectangle-31" data-id="13:295"></div><div class="rectangle-32-cusbr8" data-id="13:297"></div><div class="certificate-cusbr8 coolvetica-regular-normal-shark-58-9px" data-id="13:296">Certificate</div><div class="gdt-lab-indonesia-cusbr8" data-id="13:298">GDT LAB INDONESIA</div><div class="smk-negeri-2-singosari-cusbr8" data-id="13:301">SMK NEGERI 2 SINGOSARI</div><div class="medalion-of-excellence-cusbr8 helvetica-regular-normal-white-27-8px" data-id="13:299">MEDALION OF EXCELLENCE</div><div class="certificate-of-competency-cusbr8 helvetica-regular-normal-white-27-8px" data-id="13:302">CERTIFICATE OF COMPETENCY</div><div class="graphic-design-technology-cusbr8 helvetica-regular-normal-white-27-8px" data-id="13:300">GRAPHIC DESIGN TECHNOLOGY</div><div class="junior-content-creator-cusbr8 helvetica-regular-normal-white-27-8px" data-id="13:303">JUNIOR CONTENT CREATOR</div><div class="group-12-cusbr8" data-id="98:224"><div class="rectangle-1-fnkLnZ" data-id="98:225"></div><a href="index.html"><div class="home-fnkLnZ home helvetica-regular-normal-white-25-3px" data-id="98:226">Home</div></a><a href="desktop-3"><div class="about-fnkLnZ about helvetica-regular-normal-pomegranate-25-3px" data-id="98:227">About</div></a><a href="desktop-5.html"><div class="project-fnkLnZ project helvetica-regular-normal-white-25-3px" data-id="98:228">Project</div></a><a href="desktop-4.html"><div class="service-fnkLnZ service helvetica-regular-normal-white-25-3px" data-id="98:229">Service</div></a><a href="desktop-6.html"><div class="contact-us-fnkLnZ helvetica-regular-normal-white-25-3px" data-id="98:230">Contact Us</div></a></div><div class="group-8-cusbr8" data-id="98:249"><p class="id-love-to-hear-abou-IVz8fj id-love-to-hear-abou helvetica-regular-normal-black-27-8px" data-id="98:250">I’d love to hear about your next project or collaboration idea</p><div class="rectangle-31-IVz8fj rectangle-31" data-id="98:251"></div><div class="rectangle-24-IVz8fj" data-id="98:252"></div><div class="wildan-dzaky-IVz8fj coolvetica-regular-normal-white-58-9px" data-id="98:253">Wildan Dzaky</div><div class="navigation-IVz8fj coolvetica-regular-normal-pomegranate-26-2px" data-id="98:254">Navigation</div><div class="contact-IVz8fj coolvetica-regular-normal-pomegranate-26-2px" data-id="98:255">Contact</div><a href="index.html"><div class="home-IVz8fj home helvetica-regular-normal-white-20-2px" data-id="98:256">Home</div></a><a href="desktop-3"><div class="about-IVz8fj about helvetica-regular-normal-white-20-2px" data-id="98:257">About</div></a><a href="desktop-4.html"><div class="service-IVz8fj service helvetica-regular-normal-white-20-2px" data-id="98:258">Service</div></a><a href="desktop-5.html"><div class="project-IVz8fj project helvetica-regular-normal-white-20-2px" data-id="98:259">Project</div></a><img class="vector-5-IVz8fj vector-5" data-id="98:260" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6847ffe86c9d7f11d6373bfc/releases/684e69a3612daac40667eda1/img/vector-5-14.svg" alt="Vector 5"><p class="id-love-to-hear-abou-M6lpeK id-love-to-hear-abou helvetica-regular-normal-white-27-8px" data-id="98:261">I’d love to hear about your next project or collaboration idea</p><p class="copyrights-2025-all-rights-reserved-IVz8fj helvetica-regular-normal-white-27-8px" data-id="98:262">Copyrights 2025. All Rights Reserved</p></div><div class="component-1-cusbr8" data-id="98:263"><a href="desktop-6.html"><div class="frame-5-drrb1S" data-id="I98:263;93:110"><div class="lets-connect-fyq9J8 coolvetica-regular-normal-white-35-3px" data-id="I98:263;93:111">Let’s Connect</div></div></a><img class="vector-5-drrb1S vector-5" data-id="I98:263;93:112" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6847ffe86c9d7f11d6373bfc/releases/684e69a3612daac40667eda1/img/vector-5-13.svg" alt="Vector 5"></div><img class="group-7-cusbr8" data-id="98:264" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" anima-src="https://cdn.animaapp.com/projects/6847ffe86c9d7f11d6373bfc/releases/684e69a3612daac40667eda1/img/group-7-8.png" alt="Group 7"><a href="https://www.behance.net/wildandzaky" target="_blank"><div class="behance-cusbr8 helvetica-regular-normal-white-20-2px" data-id="98:274">Behance</div></a><div class="wildsharkyt23gmailcom-cusbr8 helvetica-regular-normal-white-20-2px" data-id="98:275">wildsharkyt23@gmail.com</div><a href="https://www.linkedin.com/in/wildzaky/" target="_blank"><div class="linkedin-cusbr8 helvetica-regular-normal-white-20-2px" data-id="98:276">Linkedin</div></a><a href="https://www.instagram.com/wildzaky/" target="_blank"><div class="instagram-cusbr8 helvetica-regular-normal-white-20-2px" data-id="98:277">Instagram</div></a></div></div><script src="launchpad-js/launchpad-banner.js" async></script><script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script></body></html>
